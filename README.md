@@ -125,7 +125,13 @@ You should be ready to go.
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources. -->
+
+Run ```sh
+magic-cli -h
+
+```
+to see all available commands
 
 <!-- ROADMAP -->
 
@@ -134,7 +140,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 - [ ] Feature 1
 - [ ] Feature 2
 - [ ] Feature 3
-  - [ ] Nested Feature
+- [ ] Nested Feature
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues). -->
 
@@ -207,3 +213,4 @@ Project Link: [https://github.com/ntegrals/repo_name](https://github.com/ntegral
 [bootstrap-url]: https://getbootstrap.com
 [jquery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [jquery-url]: https://jquery.com
+```
