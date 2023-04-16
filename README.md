@@ -87,8 +87,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Getting started with Magic CLI is really easy, just follow stepts outline below.
 
 ### Prerequisites
 
@@ -153,7 +152,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@julianschoen](https://twitter.com/julianschoen) - j.schoen@mail.com
+Julian Schoen - [@julianschoen](https://twitter.com/julianschoen) - j.schoen@mail.com
 
 Project Link: [https://github.com/ntegrals/repo_name](https://github.com/ntegrals/repo_name)
 
