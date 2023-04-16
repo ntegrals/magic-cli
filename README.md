@@ -85,23 +85,6 @@
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ### Built With
-
-- [![Next][next.js]][next-url]
-- [![React][react.js]][react-url]
-- [![Vue][vue.js]][vue-url]
-- [![Angular][angular.io]][angular-url]
-- [![Svelte][svelte.dev]][svelte-url]
-- [![Laravel][laravel.com]][laravel-url]
-- [![Bootstrap][bootstrap.com]][bootstrap-url]
-- [![JQuery][jquery.com]][jquery-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-GETTING STARTED -->
-
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -113,7 +96,10 @@ You need to have Node installed.
 
 ### Installation
 
-1. Get an OpenAI API Key at [https://openai.com/](https://openai.com/) Make sure to also request access to the GPT-4 API. (This CLI is much more powerful this way)
+1. Get an OpenAI API Key at [https://openai.com/](https://openai.com/)
+
+   Make sure to also request access to the GPT-4 API. (The CLI is much more powerful with GPT-4)
+
 2. Install the CLI via npm
    ```sh
    npm install -g magic-cli
@@ -133,8 +119,6 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- ROADMAP -->
 
 ## Roadmap
@@ -145,8 +129,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   - [ ] Nested Feature
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
@@ -163,15 +145,11 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- LICENSE -->
 
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTACT -->
 
@@ -181,8 +159,6 @@ Your Name - [@julianschoen](https://twitter.com/julianschoen) - j.schoen@mail.co
 
 Project Link: [https://github.com/ntegrals/repo_name](https://github.com/ntegrals/repo_name)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- ACKNOWLEDGMENTS -->
 
 <!-- ## Acknowledgments
@@ -190,8 +166,6 @@ Project Link: [https://github.com/ntegrals/repo_name](https://github.com/ntegral
 - []()
 - []()
 - []() -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
