@@ -125,8 +125,6 @@ You need to have Node installed.
 
 You should be ready to go.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- USAGE EXAMPLES -->
 
 ## Usage
