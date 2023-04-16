@@ -209,7 +209,3 @@ Julian Schoen - [@julianschoen](https://twitter.com/julianschoen) - j.schoen@mai
 [bootstrap-url]: https://getbootstrap.com
 [jquery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [jquery-url]: https://jquery.com
-
-```
-
-```
