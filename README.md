@@ -127,11 +127,7 @@ You should be ready to go.
 
 <!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources. -->
 
-Run ```sh
-magic-cli -h
-
-```
-to see all available commands
+Run `sh magic-cli -h` to see all available commands
 
 <!-- ROADMAP -->
 
@@ -213,4 +209,7 @@ Project Link: [https://github.com/ntegrals/repo_name](https://github.com/ntegral
 [bootstrap-url]: https://getbootstrap.com
 [jquery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [jquery-url]: https://jquery.com
+
+```
+
 ```
