@@ -4,6 +4,7 @@ import { Spinner } from "../utils/spinner";
 import { readFile } from "../utils/system";
 import { HumanChatMessage, SystemChatMessage } from "langchain/schema";
 import chalk from "chalk";
+import { CallbackManager } from "langchain/callbacks";
 
 dotenv.config();
 
@@ -40,14 +41,19 @@ export const runChain = async (
   const spinner = new Spinner(loadingMessage);
   let messages;
 
-  const chat = new ChatOpenAI({ temperature: 0, modelName: modelName });
-
-  //   if (modelName === "gpt-4") {
-  //   messages = await constructPromptGPT4(instructTemplate, data);
-  //   console.log(messages);
-  //   } else {
-  //     messages = await constructPromptGPT3Turbo(input);
-  //   }
+  const chat = new ChatOpenAI({
+    temperature: 0,
+    modelName: modelName,
+    streaming: true,
+    callbackManager: CallbackManager.fromHandlers({
+      async handleLLMNewToken(token: string) {
+        // console.log(token);
+        spinner.stop();
+        // Write stream to file
+        process.stdout.write(chalk.blue(token));
+      },
+    }),
+  });
 
   messages = [
     new SystemChatMessage(instructTemplate),
@@ -56,7 +62,7 @@ export const runChain = async (
 
   const response = await chat.call(messages);
 
-  spinner.success("Done!");
+  // spinner.success("Done!");
   //   console.log(response.text);
   return response;
 };
