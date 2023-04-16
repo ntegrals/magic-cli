@@ -106,7 +106,7 @@ You need to have Node installed.
    ```
 3. Add your API key (It's only stored on your device)
    ```sh
-   magic-cli -a "sk-9jfoaj3pafj"
+   magic-cli -a "sk-9jfoa..."
    ```
 
 You should be ready to go.
@@ -116,8 +116,6 @@ You should be ready to go.
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- ROADMAP -->
 
@@ -182,7 +180,7 @@ Project Link: [https://github.com/ntegrals/repo_name](https://github.com/ntegral
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/demo.png
 [next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [next-url]: https://nextjs.org/
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
