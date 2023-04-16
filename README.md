@@ -95,6 +95,7 @@
     ✅ Recursive Reflexion              [Optional: Makes GPT reflect on it's answers to improve the output quality]
     🟨 Add new feature                  [Adds a new feature based on an input file]
     🟨 Process directories              [CLI can process directories and not only files]
+    🟨 Provide examples                 [User can provide examples to better guide GPT-4]
 
 ## Getting Started
 

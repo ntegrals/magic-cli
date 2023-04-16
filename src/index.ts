@@ -15,16 +15,27 @@ const main = async () => {
   program
     .version("1.0.0", "-v, --version", "output the current version")
     .description("Brings the power of GPT-4 to your terminal")
-    .option("-r, --review  [filePath]", "code review for a file")
-    .option("-i, --improve  [filePath]", "refactor the code")
-    .option("-b, --best  [filePath]", "convert the code to the best practices")
-    .option("-f, --fix [filePath]", "fix the code recursively")
-    .option("-l, --lang [filePath]", "convert the code to a different language")
-    .option("-e, --eli5 [filePath]", "explain the code in simple terms")
-    .option("-t, --test [filePath]", "generate unit tests for the code")
-    .option("-d, --document [filePath]", "generate documentation for the code")
-    .option("-x, --arbitrary [filePath]", "accepts any instruction")
-    .option("-o, --output [filePath]", "the output file path")
+    .option("-r, --review  <filePath>", "code review for a file")
+    .option("-i, --improve  <filePath>", "refactor the code")
+    .option("-b, --best  <filePath>", "convert the code to the best practices")
+    .option("-f, --fix <filePath> <interpreter>", "fix the code recursively")
+    .option(
+      "-l, --lang [filePath targetLanguage...]",
+      "convert the code to a different language"
+    )
+    .option("-e, --eli5 <filePath>", "explain the code in simple terms")
+    .option(
+      "-t, --test [filePath framework...]",
+      "generate unit tests for the code"
+    )
+    .option("-d, --document <filePath>", "generate documentation for the code")
+    .option(
+      "-x, --arbitraryFile [filePath prompt...]",
+      "accepts any instruction (prompt needs to be in quotes)"
+    )
+    .option("-z, --arbitrary <prompt>", "accepts any instruction")
+    .option("-o, --output <filePath>", "the output file path")
+    .option("-s, --silent", "Prevents loggint the stream to the console")
     .option(
       "-a, --addkey [apiKey]",
       "add your OpenAI API key to the the environment"
@@ -47,9 +58,14 @@ const main = async () => {
   // default output = output.txt
   // or you can specify a specifc output file
   let filePath = join(process.cwd(), "output.txt");
+  let silent = false;
 
   if (options.output) {
     filePath = typeof options.output === "string" ? options.output : filePath;
+  }
+
+  if (options.silent) {
+    silent = true;
   }
 
   // Options for API Key
@@ -78,7 +94,8 @@ const main = async () => {
     const data = await runCompleteChain(
       filepath,
       prompts.codeReviewInstruction,
-      "Reviewing code..."
+      "Reviewing code...",
+      silent
     );
     // checks if the data is not null and the output option is passed
     if (data && options.output) {
@@ -91,7 +108,8 @@ const main = async () => {
     const data = await runCompleteChain(
       filepath,
       prompts.refactorInstruction,
-      "Refactoring code..."
+      "Refactoring code...",
+      silent
     );
     // checks if the data is not null
     // writes to a file by default
@@ -105,7 +123,8 @@ const main = async () => {
     const data = await runCompleteChain(
       filepath,
       prompts.bestPracticesInstruction,
-      "Make sure the code follows best practices..."
+      "Make sure the code follows best practices...",
+      silent
     );
     // checks if the data is not null
     // writes to a file by default
@@ -118,11 +137,23 @@ const main = async () => {
     //   const filepath = typeof options.fix === "string" ? options.fix : "";
     // conductCodeReview(filepath);
   } else if (options.lang) {
-    const filepath = typeof options.lang === "string" ? options.lang : "";
+    if (options.lang.length < 2) {
+      console.log(
+        chalk.red(
+          "Error parsing arguments please provide them in this format: -l src/test.js python"
+        )
+      );
+      return;
+    }
+    const filepath = typeof options.lang[0] === "string" ? options.lang[0] : "";
+    const language = typeof options.lang[1] === "string" ? options.lang[1] : "";
+
+    // console.log(filepath, language);
     const data = await runCompleteChain(
       filepath,
-      prompts.convertLanguageInstruction,
-      "Converting Language..."
+      prompts.convertLanguageInstruction.replace("{language}", language),
+      "Converting Language...",
+      silent
     );
     // checks if the data is not null
     // writes to a file by default
@@ -136,7 +167,8 @@ const main = async () => {
     const data = await runCompleteChain(
       filepath,
       prompts.eli5Instruction,
-      "Generating ELI5..."
+      "Generating ELI5...",
+      silent
     );
     // checks if the data is not null and the output option is passed
     if (data && options.output) {
@@ -145,11 +177,23 @@ const main = async () => {
       console.log(chalk.red("Error writing to output file"));
     }
   } else if (options.test) {
-    const filepath = typeof options.test === "string" ? options.test : "";
+    if (options.test.length < 2) {
+      console.log(
+        chalk.red(
+          "Error parsing arguments please provide them in this format: -t src/test.js jest"
+        )
+      );
+      return;
+    }
+    const filepath = typeof options.test[0] === "string" ? options.test[0] : "";
+    const framework =
+      typeof options.test[1] === "string" ? options.test[1] : "";
+
     const data = await runCompleteChain(
       filepath,
-      prompts.testsInstruction,
-      "Generating unit tests..."
+      prompts.testsInstruction.replace("{framework}", framework),
+      "Generating unit tests...",
+      silent
     );
     // checks if the data is not null
     // writes to a file by default
@@ -164,7 +208,8 @@ const main = async () => {
     const data = await runCompleteChain(
       filepath,
       prompts.documentationInstruction,
-      "Documenting code..."
+      "Documenting code...",
+      silent
     );
     // checks if the data is not null
     // writes to a file by default
@@ -179,7 +224,24 @@ const main = async () => {
     const data = await runCompleteChain(
       filepath,
       prompts.arbitraryInstruction,
-      "Running arbitrary instruction..."
+      "Running arbitrary instruction...",
+      silent
+    );
+    // checks if the data is not null
+    // writes to a file by default
+    if (data) {
+      writeFile(filePath, data);
+    } else {
+      console.log(chalk.red("Error writing to output file"));
+    }
+  } else if (options.arbitraryFile) {
+    const filepath =
+      typeof options.arbitrary === "string" ? options.arbitrary : "";
+    const data = await runCompleteChain(
+      filepath,
+      prompts.arbitraryInstruction,
+      "Running arbitrary instruction...",
+      silent
     );
     // checks if the data is not null
     // writes to a file by default

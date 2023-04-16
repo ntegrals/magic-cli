@@ -14,9 +14,12 @@ export const eli5Instruction =
   "Imagine you are explaining a concept to a five-year-old: Please take a look at the provided piece of code and provide a clear, simple, and easy-to-understand explanation of its purpose, functionality, and how it works. Break down the code into smaller parts, if necessary, and use everyday analogies or examples to help clarify the concepts. Keep in mind that your explanation should be engaging and accessible for a young child who has no prior knowledge of programming or technical jargon.";
 
 export const testsInstruction =
-  "Please create comprehensive and well-structured unit tests for the given piece of code, ensuring that you cover all possible scenarios, edge cases, and expected behaviors. Use the appropriate testing framework and syntax for the programming language in which the code is written. Your response should consist solely of the test code, without any additional explanation or commentary. Ensure that the tests are modular, easy to understand, and follow best practices for test-driven development.";
+  "Please create comprehensive and well-structured unit tests for the given piece of code in {framework}, ensuring that you cover all possible scenarios, edge cases, and expected behaviors. Use {framework} and the appropriate syntax for the programming language in which the code is written. Your response should consist solely of the test code, without any additional explanation or commentary. Ensure that the tests are modular, easy to understand, and follow best practices for test-driven development.";
 
 export const documentationInstruction =
+  "Please create thorough and clear documentation for the provided piece of code by adding relevant comments, docstrings, and annotations in accordance with the programming language's best practices and style guides. Your response should consist solely of the original code with the added documentation, without any additional explanation or commentary. Focus on explaining the purpose, functionality, and any important implementation details to ensure that the code is easy to understand and maintain for future developers.";
+
+export const recursiveInstruction =
   "Please create thorough and clear documentation for the provided piece of code by adding relevant comments, docstrings, and annotations in accordance with the programming language's best practices and style guides. Your response should consist solely of the original code with the added documentation, without any additional explanation or commentary. Focus on explaining the purpose, functionality, and any important implementation details to ensure that the code is easy to understand and maintain for future developers.";
 
 export const arbitraryInstruction = "";
