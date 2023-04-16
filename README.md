@@ -95,8 +95,8 @@
     ✅ Refactor Code
     ✅ Document Code
     ✅ Best Practices
-    ⚠️ Add new feature
-    ⚠️ Process directories
+    🟨 Add new feature
+    🟨 Process directories
 
 ## Getting Started
 
