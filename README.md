@@ -109,28 +109,21 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
+You need to have Node installed.
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Get an OpenAI API Key at [https://openai.com/](https://openai.com/) Make sure to also request access to the GPT-4 API. (This CLI is much more powerful this way)
+2. Install the CLI via npm
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   npm install -g magic-cli
    ```
-3. Install NPM packages
+3. Add your API key (It's only stored on your device)
    ```sh
-   npm install
+   magic-cli -a "sk-9jfoaj3pafj"
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = "ENTER YOUR API";
-   ```
+
+You should be ready to go.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
