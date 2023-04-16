@@ -37,14 +37,14 @@ const main = async () => {
     .option("-o, --output <filePath>", "the output file path")
     .option("-s, --silent", "Prevents loggint the stream to the console")
     .option(
-      "-a, --addkey [apiKey]",
+      "-ak, --addkey [apiKey]",
       "add your OpenAI API key to the the environment"
     )
     .option(
-      "-d, --deletekey",
+      "-dk, --deletekey",
       "delete your OpenAI API key from the environment"
     )
-    .option("-p, --printkey", "print your OpenAI API key")
+    .option("-pk, --printkey", "print your OpenAI API key")
     .parse(process.argv);
 
   const options = program.opts();
@@ -73,16 +73,16 @@ const main = async () => {
     const key = typeof options.addkey === "string" ? options.addkey : "";
 
     if (key) {
-      fs.writeFileSync(".env", `OPENAI_API_KEY=${key}`);
+      fs.writeFileSync(join(__dirname, ".env"), `OPENAI_API_KEY=${key}`);
       console.log(chalk.green("You have successfully added your API key"));
     } else {
       console.log(chalk.red("Please enter a valid API key"));
     }
   } else if (options.deletekey) {
-    fs.writeFileSync(".env", "");
+    fs.writeFileSync(join(__dirname, ".env"), "");
     console.log(chalk.green("You have successfully deleted your API key"));
   } else if (options.printkey) {
-    const data = fs.readFileSync(".env", { encoding: "utf8" });
+    const data = fs.readFileSync(join(__dirname, ".env"), { encoding: "utf8" });
 
     if (data) {
       console.log(chalk.blue(data));
@@ -236,10 +236,17 @@ const main = async () => {
     }
   } else if (options.arbitraryFile) {
     const filepath =
-      typeof options.arbitrary === "string" ? options.arbitrary : "";
+      typeof options.arbitraryFile[0] === "string"
+        ? options.arbitraryFile[0]
+        : "";
+    const prompt =
+      typeof options.arbitraryFile[1] === "string"
+        ? options.arbitraryFile[1]
+        : "";
+
     const data = await runCompleteChain(
       filepath,
-      prompts.arbitraryInstruction,
+      prompt,
       "Running arbitrary instruction...",
       silent
     );

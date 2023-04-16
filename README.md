@@ -94,6 +94,7 @@
     ✅ Best Practices                   [Converts the code to use the best practices]
     ✅ Recursive Reflexion              [Optional: Makes GPT reflect on it's answers to improve the output quality]
     🟨 Add new feature                  [Adds a new feature based on an input file]
+    🟨 Increase context window          [Increase context window with vector embeddings]
     🟨 Process directories              [CLI can process directories and not only files]
     🟨 Provide examples                 [User can provide examples to better guide GPT-4]
 
@@ -129,6 +130,27 @@ You should be ready to go.
 <!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources. -->
 
 Run `magic-cli -h` to see all available commands
+
+    -v, --version                             [output the current version]
+    -r, --review  <filePath>                  code review for a file
+    -i, --improve  <filePath>                 refactor the code
+    -b, --best  <filePath>                    convert the code to the best practices
+    -f, --fix <filePath> <interpreter>        fix the code recursively
+    -l, --lang [filePath targetLanguage...]   convert the code to a different language
+    -e, --eli5 <filePath>                     explain the code in simple terms
+    -t, --test [filePath framework...]        generate unit tests for the code
+    -d, --document <filePath>                 generate documentation for the code
+    -x, --arbitraryFile [filePath prompt...]  accepts any instruction (prompt needs to be
+                                              in quotes)
+    -z, --arbitrary <prompt>                  accepts any instruction
+    -o, --output <filePath>                   the output file path
+    -s, --silent                              Prevents loggint the stream to the console
+    -ak, --addkey [apiKey]                    add your OpenAI API key to the the
+                                              environment
+    -dk, --deletekey                          delete your OpenAI API key from the
+                                              environment
+    -pk, --printkey                           print your OpenAI API key
+    -h, --help                                display help for command
 
 <!-- ROADMAP -->
 
