@@ -87,7 +87,7 @@
     ✅ Code Review                      [Reviews a code file]
     ✅ Self Healing Code                [Runs a script until fixed or limit reached]
     ✅ Generate Unit Tests              [Generates unit tests for a code file]
-    ✅ Convert Programming Language     [Convert a code file to another language]
+    ✅ Convert Programming Language     [Converts a code file to another language]
     ✅ ELI5 Code                        [Generates an ELI5 explanation]
     ✅ Refactor Code                    [Refactors the code]
     ✅ Document Code                    [Adds documentation to the code]
