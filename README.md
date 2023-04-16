@@ -85,6 +85,19 @@
 
 <!-- Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description` -->
 
+## Features
+
+    ✅ Code Review
+    ✅ Self Healing Code
+    ✅ Generate Unit Tests
+    ✅ Convert Programming Language
+    ✅ ELI5 Code
+    ✅ Refactor Code
+    ✅ Document Code
+    ✅ Best Practices
+    ⚠️ Add new feature
+    ⚠️ Process directories
+
 ## Getting Started
 
 Getting started with Magic CLI is really easy, just follow stepts outline below.
