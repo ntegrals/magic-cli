@@ -23,6 +23,7 @@ const main = async () => {
     .option("-e, --eli5 [filePath]", "explain the code in simple terms")
     .option("-t, --test [filePath]", "generate unit tests for the code")
     .option("-d, --document [filePath]", "generate documentation for the code")
+    .option("-x, --arbitrary [filePath]", "accepts any instruction")
     .option("-o, --output [filePath]", "the output file path")
     .option(
       "-a, --addkey [apiKey]",
@@ -164,6 +165,21 @@ const main = async () => {
       filepath,
       prompts.documentationInstruction,
       "Documenting code..."
+    );
+    // checks if the data is not null
+    // writes to a file by default
+    if (data) {
+      writeFile(filePath, data);
+    } else {
+      console.log(chalk.red("Error writing to output file"));
+    }
+  } else if (options.arbitrary) {
+    const filepath =
+      typeof options.arbitrary === "string" ? options.arbitrary : "";
+    const data = await runCompleteChain(
+      filepath,
+      prompts.arbitraryInstruction,
+      "Running arbitrary instruction..."
     );
     // checks if the data is not null
     // writes to a file by default

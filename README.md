@@ -98,7 +98,7 @@
 
 ## Getting Started
 
-Getting started with Magic CLI is really easy, just follow stepts outline below.
+Getting started with Magic CLI is really easy, just follow steps outlined below.
 
 ### Prerequisites
 
@@ -167,7 +167,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Julian Schoen - [@julianschoen](https://twitter.com/julianschoen) - j.schoen@mail.com
 
-Project Link: [https://github.com/ntegrals/repo_name](https://github.com/ntegrals/repo_name)
+<!-- Project Link: [https://github.com/ntegrals/repo_name](https://github.com/ntegrals/repo_name) -->
 
 <!-- ACKNOWLEDGMENTS -->
 

@@ -18,3 +18,5 @@ export const testsInstruction =
 
 export const documentationInstruction =
   "Please create thorough and clear documentation for the provided piece of code by adding relevant comments, docstrings, and annotations in accordance with the programming language's best practices and style guides. Your response should consist solely of the original code with the added documentation, without any additional explanation or commentary. Focus on explaining the purpose, functionality, and any important implementation details to ensure that the code is easy to understand and maintain for future developers.";
+
+export const arbitraryInstruction = "";
