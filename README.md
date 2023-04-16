@@ -87,17 +87,17 @@
 
 ## Features
 
-✅ Code Review [Reviews a code file]
-✅ Self Healing Code [Runs a script until fixed or limit reached]
-✅ Generate Unit Tests [Generates unit tests for a code file]
-✅ Convert Programming Language [Convert a code file to another language]
-✅ ELI5 Code [Generates an ELI5 explanation]
-✅ Refactor Code [Refactors the code]
-✅ Document Code [Adds documentation to the code]
-✅ Best Practices [Converts the code to use the best practices]
-✅ Recursive Reflexion [Optional: Makes GPT reflect on it's answers to improve the output quality]
-🟨 Add new feature [Adds a new feature based on an input file]
-🟨 Process directories [CLI can process directories and not only files]
+    ✅ Code Review [Reviews a code file]
+    ✅ Self Healing Code [Runs a script until fixed or limit reached]
+    ✅ Generate Unit Tests [Generates unit tests for a code file]
+    ✅ Convert Programming Language [Convert a code file to another language]
+    ✅ ELI5 Code [Generates an ELI5 explanation]
+    ✅ Refactor Code [Refactors the code]
+    ✅ Document Code [Adds documentation to the code]
+    ✅ Best Practices [Converts the code to use the best practices]
+    ✅ Recursive Reflexion [Optional: Makes GPT reflect on it's answers to improve the output quality]
+    🟨 Add new feature [Adds a new feature based on an input file]
+    🟨 Process directories [CLI can process directories and not only files]
 
 ## Getting Started
 
