@@ -110,7 +110,7 @@ const main = async () => {
       );
       return;
     }
-    const filepath = typeof options.fix[0] === "string" ? options.fix[0] : "";
+    filePath = typeof options.fix[0] === "string" ? options.fix[0] : "";
     const interpreter =
       typeof options.fix[1] === "string" ? options.fix[1] : "";
 
@@ -121,7 +121,7 @@ const main = async () => {
       // run the file
       // if the file throws an error, continue
       // if the file works, run it and break afterwards
-      const result = await executeFile(filepath, interpreter);
+      const result = await executeFile(filePath, interpreter);
 
       if (result.type === "stdout") {
         console.log(result.output);
@@ -130,7 +130,7 @@ const main = async () => {
 
       let file;
       try {
-        file = readFile(filepath);
+        file = readFile(filePath);
       } catch (error) {
         if (!filePath) {
           console.log(chalk.red("Please provide a file path."));
@@ -150,7 +150,7 @@ const main = async () => {
         "gpt-4"
       );
 
-      writeFile(filepath, llmOutput.text);
+      writeFile(filePath, llmOutput.text);
     }
   } else if (options.lang) {
     await multiOption(options, "lang", prompts.convertLanguageInstruction);

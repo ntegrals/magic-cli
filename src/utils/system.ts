@@ -1,7 +1,6 @@
 import fs from "fs";
 import chalk from "chalk";
 import { runCompleteChain } from "../langchain/chain";
-import * as prompts from "../langchain/prompts";
 
 // Read in file
 export const readFile = (filePath: string) => {
