@@ -35,7 +35,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Magic-GPT</h3>
+<h3 align="center">GPTx</h3>
 
   <p align="center">
     Brings the power of GPT-4 to your terminal
