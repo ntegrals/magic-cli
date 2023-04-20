@@ -4,7 +4,7 @@ import { Command } from "commander";
 import figlet from "figlet";
 import fs from "fs";
 import chalk from "chalk";
-import { runChain, runCompleteChain } from "./langchain/chain";
+import { runChain } from "./langchain/chain";
 import {
   defaultOption,
   multiOption,
@@ -172,8 +172,6 @@ const main = async () => {
 
     if (data && options.output) {
       writeFile(filePath, data.text);
-    } else {
-      console.log(chalk.red("Error writing to output file"));
     }
   } else if (options.arbitraryFile) {
     multiOption(options, "arbitraryFile", prompts.arbitraryInstruction);
