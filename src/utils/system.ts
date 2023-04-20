@@ -18,6 +18,7 @@ export const writeFile = (filePath: string, data: string) => {
   console.log(chalk.green(`Output was written to ${filePath}`));
 };
 
+// only as a file input
 export const defaultOption = async (
   options: any,
   commandName: string,
@@ -49,6 +50,7 @@ export const defaultOption = async (
   }
 };
 
+// has a file input and one more argument
 export const multiOption = async (
   options: any,
   commandName: string,

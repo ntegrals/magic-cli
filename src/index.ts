@@ -144,7 +144,7 @@ const main = async () => {
 
       const llmOutput = await runChain(
         file,
-        prompts.fixInstruction.replace("{error}", result.output), // add the error to the instruction
+        prompts.fixInstruction.replace("{replace}", result.output), // add the error to the instruction
         "Running script in regenerative mode...",
         silent,
         "gpt-4"
@@ -170,8 +170,6 @@ const main = async () => {
       silent
     );
 
-    // checks if the data is not null
-    // writes to a file by default
     if (data && options.output) {
       writeFile(filePath, data.text);
     } else {
