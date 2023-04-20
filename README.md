@@ -51,12 +51,6 @@
   </p>
 </div>
 
-<!-- ABOUT THE PROJECT -->
-
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 ## Features
 
     ✅ Code Review                      [Reviews a code file]
@@ -73,30 +67,32 @@
     🟨 Process directories              [CLI can process directories and not only files]
     🟨 Provide examples                 [User can provide examples to better guide GPT-4]
 
-## Getting Started
+## Installation
 
-Getting started with Magic CLI is really easy, just follow steps outlined below.
 
-### Prerequisites
-
-You need to have Node installed.
-
-### Installation
+You need to have [Node.js](https://nodejs.org/en) installed.
 
 1. Get an OpenAI API Key at [https://openai.com/](https://openai.com/)
 
-   Make sure to also request access to the GPT-4 API. (The CLI is much more powerful with GPT-4)
+   To do so...
+
+   By default the model uses GPT-3.5...
+
+   Optionally, you can request access to the GPT-4 API. The Magic CLI is much more powerful with GPT-4.
 
 2. Install the CLI via npm
    ```sh
    npm install -g magic-cli
    ```
-3. Add your API key (It's only stored on your device)
+3. Add your OpenAI API key (It's only stored on your device)
    ```sh
    magic-cli -ak "sk-9jfoa..."
    ```
 
-You should be ready to go.
+To verify that the installation worked, run:
+```
+...
+```
 
 <!-- USAGE EXAMPLES -->
 
@@ -119,37 +115,23 @@ Run `magic-cli -h` to see all available commands
     -x, --arbitraryFile [filePath prompt...]  accepts any instruction (prompt needs to be in quotes)
     -z, --arbitrary <prompt>                  accepts any instruction
     -o, --output [filePath]                   the output file path
-    -s, --silent                              Prevents logging the stream to the console
+    -s, --silent                              prevents logging the stream to the console
     -ak, --addkey [apiKey]                    add your OpenAI API key to the the environment
     -dk, --deletekey                          delete your OpenAI API key from the environment
     -pk, --printkey                           print your OpenAI API key
     -h, --help                                display help for command
 
-<!-- ROADMAP -->
+<!-- Security -->
 
-<!-- ## Roadmap
+## Security
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-- [ ] Nested Feature
+...
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues). -->
+<!-- Disclaimer -->
 
-<!-- CONTRIBUTING -->
+## Disclaimer
 
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+...
 
 <!-- LICENSE -->
 
@@ -162,6 +144,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Julian Schoen - [@julianschoen](https://twitter.com/julianschoen) - j.schoen@mail.com
+
+Feel free to say thanks: Buy Me A Coffee
 
 <!-- Project Link: [https://github.com/ntegrals/repo_name](https://github.com/ntegrals/repo_name) -->
 
