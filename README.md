@@ -106,24 +106,22 @@ You should be ready to go.
 
 Run `magic-cli -h` to see all available commands
 
-    -v, --version                             [output the current version]
+    Options:
+    -v, --version                             output the current version
     -r, --review  <filePath>                  code review for a file
     -i, --improve  <filePath>                 refactor the code
     -b, --best  <filePath>                    convert the code to the best practices
-    -f, --fix <filePath> <interpreter>        fix the code recursively
+    -f, --fix [filePath interpreter...]       fix the code recursively
     -l, --lang [filePath targetLanguage...]   convert the code to a different language
     -e, --eli5 <filePath>                     explain the code in simple terms
     -t, --test [filePath framework...]        generate unit tests for the code
     -d, --document <filePath>                 generate documentation for the code
-    -x, --arbitraryFile [filePath prompt...]  accepts any instruction (prompt needs to be
-                                              in quotes)
+    -x, --arbitraryFile [filePath prompt...]  accepts any instruction (prompt needs to be in quotes)
     -z, --arbitrary <prompt>                  accepts any instruction
-    -o, --output <filePath>                   the output file path
-    -s, --silent                              Prevents loggint the stream to the console
-    -ak, --addkey [apiKey]                    add your OpenAI API key to the the
-                                              environment
-    -dk, --deletekey                          delete your OpenAI API key from the
-                                              environment
+    -o, --output [filePath]                   the output file path
+    -s, --silent                              Prevents logging the stream to the console
+    -ak, --addkey [apiKey]                    add your OpenAI API key to the the environment
+    -dk, --deletekey                          delete your OpenAI API key from the environment
     -pk, --printkey                           print your OpenAI API key
     -h, --help                                display help for command
 
