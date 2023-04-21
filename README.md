@@ -50,7 +50,11 @@ You need to have [Node.js](https://nodejs.org/en) installed.
    ```sh
    npm install -g magicgpt
    ```
-3. Add your OpenAI API key (It's only stored on your device)
+3. To verify that the installation worked, run:
+   ```
+   magic
+   ```
+4. Add your OpenAI API key (It's only stored on your device)
    ```sh
    magic -ak "sk-9jfoa..."
    ```
