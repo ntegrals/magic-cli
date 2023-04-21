@@ -1,6 +1,5 @@
 <a name="readme-top"></a>
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/ntegrals/magicgpt">
@@ -10,11 +9,9 @@
 <h3 align="center">Magic GPT</h3>
 
   <p align="center">
-    Self-repairing code for any language, programming language conversion, automatic unit tests, and much more
+    Self-repairing code for any language, programming language translation, automatic unit tests, and much more
     <br />
-    <!-- <a href="https://github.com/ntegrals/magicgpt"><strong>Explore the docs »´</strong></a> -->
-    <!-- <br /> -->
-    <br />
+  
     <a href="https://github.com/ntegrals/magicgpt">View Demo</a>
     ·
     <a href="https://github.com/ntegrals/magicgpt/issues">Report Bug</a>
@@ -26,9 +23,9 @@
 ## Features
 
     ✅ Self-Repairing Code              [Runs a script in any language and fixes it upon crash]
-    ✅ Code Review                      [Reviews a code file]
+    ✅ Conduct Code Reviews             [Reviews a code file]
     ✅ Generate Unit Tests              [Generates unit tests for a code file]
-    ✅ Convert Programming Language     [Converts a code file to another language]
+    ✅ Translate Programming Languages  [Converts a code file to another language]
     ✅ ELI5 Code                        [Generates an ELI5 explanation]
     ✅ Refactor Code                    [Refactors the code]
     ✅ Document Code                    [Adds documentation to the code]
@@ -128,16 +125,4 @@ By using Magic GPT, you agree to indemnify, defend, and hold harmless the develo
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/demo.png
