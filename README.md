@@ -83,6 +83,14 @@ Run the magic command in a directory with a file called `test.py`. We also need 
   magic -l test.py TypeScript -o test.ts
 ```
 
+### 3. Conduct a code review
+
+Run the magic command in a directory with a file called `test.py`. In this case we might only want to view the output in the terminal, so we don't need to specify an output file. This command will review the code and give you feedback on how to improve it.
+
+```sh
+  magic -r test.py
+```
+
 ## Usage
 
 <img src="images/test.gif" alt="test">
