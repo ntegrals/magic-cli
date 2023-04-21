@@ -19,7 +19,7 @@
     "commander": "^10.0.1",
     "dotenv": "^16.0.3",
     "figlet": "^1.6.0",
-    "langchain": "^0.0.55",
+    "langchain": "0.0.55",
     "ora": "^5.4.1"
   },
   "devDependencies": {
