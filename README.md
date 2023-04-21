@@ -96,7 +96,7 @@ Run `magic -h` to see all available commands
 
 Hi! Thanks for checking out and using this library. If you are interested in discussing your project, require mentorship, consider hiring me, or just wanna chat - I'm happy to talk.
 
-You can send me an email to get in touch: j.schoen@mail.com or message me on Twitter [@julianschoen](https://twitter.com/julianschoen)
+You can send me an email to get in touch: j.schoen@mail.com or message me on Twitter: [@julianschoen](https://twitter.com/julianschoen)
 
 If you'd just want to give something back, I've got a Buy Me A Coffee account:
 
