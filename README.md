@@ -99,7 +99,10 @@ You can send me an email to get in touch: j.schoen@mail.com or message me on Twi
 
 If you'd just want to give something back, I've got a Buy Me A Coffee account:
 
-[Buy Me A Coffee](https://www.buymeacoffee.com/ntegrals)
+<a href="https://www.buymeacoffee.com/ntegrals">
+<img src="images/buymeacoffee.png" alt="buymeacoffee" width="192">
+</a>
+
 Thanks and have an awesome day 👋
 
 <!-- Julian Schoen - [@julianschoen](https://twitter.com/julianschoen) - j.schoen@mail.com
