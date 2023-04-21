@@ -1,37 +1,9 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-
 <a name="readme-top"></a>
-
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-<!-- [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url] -->
-
-<!-- [![MIT License][license-shield]][license-url]
-[![Twitter][twitter-shield]][https://twitter.com/julianschoen]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/julianschoen/] -->
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/ntegrals/repo_name">
+  <a href="https://github.com/ntegrals/magicgpt">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -40,14 +12,14 @@
   <p align="center">
     Brings the power of GPT-4 to your code.
     <br />
-    <!-- <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »´</strong></a> -->
+    <!-- <a href="https://github.com/ntegrals/magicgpt"><strong>Explore the docs »´</strong></a> -->
     <!-- <br /> -->
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/ntegrals/magicgpt">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/ntegrals/magicgpt/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/ntegrals/magicgpt/issues">Request Feature</a>
   </p>
 </div>
 
@@ -61,7 +33,7 @@
     ✅ Refactor Code                    [Refactors the code]
     ✅ Document Code                    [Adds documentation to the code]
     ✅ Best Practices                   [Converts the code to use the best practices]
-    ✅ Reflexion                        [GPT reflects on it's answers to improve the output quality]
+    🟨 Reflexion                        [GPT reflects on it's answers to improve the output quality]
     🟨 Add new feature                  [Adds a new feature based on an input file]
     🟨 Increase context window          [Increase context window with vector embeddings]
     🟨 Process directories              [CLI can process directories and not only files]
@@ -73,25 +45,23 @@ You need to have [Node.js](https://nodejs.org/en) installed.
 
 1. Get an OpenAI API Key at [https://openai.com/](https://openai.com/)
 
-   To do so...
+   By default the model uses GPT-4.
 
-   By default the model uses GPT-3.5...
-
-   Optionally, you can request access to the GPT-4 API. The Magic CLI is much more powerful with GPT-4.
+   If you don't have access to GPT-4 yet, you have to use the --gpt3 flag. Magic GPT is much more powerful with GPT-4.
 
 2. Install the CLI via npm
    ```sh
-   npm install -g magic-cli
+   npm install -g magicgpt
    ```
 3. Add your OpenAI API key (It's only stored on your device)
    ```sh
-   magic-cli -ak "sk-9jfoa..."
+   magic -ak "sk-9jfoa..."
    ```
 
 To verify that the installation worked, run:
 
 ```
-magic-cli
+magic
 ```
 
 <!-- USAGE EXAMPLES -->
@@ -169,19 +139,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/demo.png
-[next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[next-url]: https://nextjs.org/
-[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[react-url]: https://reactjs.org/
-[vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[vue-url]: https://vuejs.org/
-[angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[angular-url]: https://angular.io/
-[svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[svelte-url]: https://svelte.dev/
-[laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[laravel-url]: https://laravel.com
-[bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[bootstrap-url]: https://getbootstrap.com
-[jquery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[jquery-url]: https://jquery.com
