@@ -41,7 +41,8 @@ const main = async () => {
     )
     .option("-z, --arbitrary <prompt>", "accepts any instruction")
     .option("-o, --output [filePath]", "the output file path")
-    .option("-s, --silent", "Prevents logging the stream to the console")
+    .option("-s, --silent", "prevents logging the stream to the console")
+    .option("-g3, --gpt3", "only uses GPT-3.5")
     .option(
       "-ak, --addkey [apiKey]",
       "add your OpenAI API key to the the environment"

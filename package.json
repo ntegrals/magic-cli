@@ -16,7 +16,7 @@
   "dependencies": {
     "@dqbd/tiktoken": "^1.0.6",
     "chalk": "^4.1.2",
-    "commander": "^10.0.0",
+    "commander": "^10.0.1",
     "dotenv": "^16.0.3",
     "figlet": "^1.6.0",
     "langchain": "^0.0.55",
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@types/figlet": "^1.5.5",
-    "@types/node": "^18.15.11",
+    "@types/node": "^18.15.13",
     "typescript": "^5.0.4"
   }
 }
