@@ -77,7 +77,7 @@ This command will run the file `test.py` with the interpreter `python3` and auto
 
 ### 2. Translate from Python to TypeScript
 
-Run the magic command in a directory with a file called `test.py`. We also need to specify a file that we want to write to `test.ts` in this case (If not the CLI will only log to the console):
+Run the magic command in a directory with a file called `test.py`. We also need to specify a file that we want to write to `test.ts` in this case (If not the CLI will only log to the console). Now Magic GPT will automatically translate the code to TypeScript.
 
 ```sh
   magic -l test.py TypeScript -o test.ts
@@ -89,6 +89,14 @@ Run the magic command in a directory with a file called `test.py`. In this case 
 
 ```sh
   magic -r test.py
+```
+
+### 4. Generate unit tests
+
+Run the magic command in a directory with a file called `hello.ts` with the testing framework that we want to use (Jest in this case). We also need to specify the file that we want to write to `hello.test.ts`. Now Magic GPT will automatically generate unit tests for the code.
+
+```sh
+  magic -t hello.ts Jest -o hello.test.ts
 ```
 
 ## Usage
