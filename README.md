@@ -113,7 +113,7 @@ Run `magic -h` to see all available commands
     -z, --arbitrary <prompt>                  accepts any instruction
     -o, --output [filePath]                   the output file path
     -s, --silent                              prevents logging the stream to the console
-    -g, --gpt3                                Only uses GPT-3.5
+    -g, --gpt3                                only uses GPT-3.5
     -ak, --addkey [apiKey]                    add your OpenAI API key to the the environment
     -dk, --deletekey                          delete your OpenAI API key from the environment
     -pk, --printkey                           print your OpenAI API key
@@ -135,7 +135,7 @@ Thanks and have an awesome day 👋
 
 ## Disclaimer
 
-This project, Magic GPT, is an experimental application and is provided "as-is" without any warranty, express or implied. By using this software, you agree to assume all risks associated with its use, including but not limited to data loss, system failure, or any other issues that may arise.
+Magic GPT, is an experimental application and is provided "as-is" without any warranty, express or implied. By using this software, you agree to assume all risks associated with its use, including but not limited to data loss, system failure, or any other issues that may arise.
 
 The developers and contributors of this project do not accept any responsibility or liability for any losses, damages, or other consequences that may occur as a result of using this software. You are solely responsible for any decisions and actions taken based on the information provided by Magic GPT.
 
