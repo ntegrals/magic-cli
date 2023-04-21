@@ -42,9 +42,7 @@ You need to have [Node.js](https://nodejs.org/en) installed.
 
 1. Get an OpenAI API Key at [https://openai.com/](https://openai.com/)
 
-   By default the model uses GPT-4.
-
-   If you don't have access to GPT-4 yet, you have to use the --gpt3 flag. Magic GPT is much more powerful with GPT-4.
+   By default the model uses GPT-4. If you don't have access to GPT-4 yet, you have to use the --gpt3 flag. Magic GPT is much more powerful with GPT-4.
 
 2. Install the CLI via npm
    ```sh
