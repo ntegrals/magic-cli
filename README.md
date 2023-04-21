@@ -10,7 +10,7 @@
 <h3 align="center">Magic GPT</h3>
 
   <p align="center">
-    GTP-4 powered code companion (CLI). 
+    GTP-4 powered code companion (CLI). <br/>
     Self-repairing code for any language, programming language conversion, automatic unit tests, and much more
     <br />
     <!-- <a href="https://github.com/ntegrals/magicgpt"><strong>Explore the docs »´</strong></a> -->
