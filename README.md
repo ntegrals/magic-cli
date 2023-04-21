@@ -59,12 +59,6 @@ You need to have [Node.js](https://nodejs.org/en) installed.
    magic -ak "sk-9jfoa..."
    ```
 
-To verify that the installation worked, run:
-
-```
-magic
-```
-
 <!-- USAGE EXAMPLES -->
 
 ## Examples
