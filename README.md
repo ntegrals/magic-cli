@@ -63,6 +63,26 @@ magic
 
 <!-- USAGE EXAMPLES -->
 
+## Examples
+
+### 1. Self-Repair a Python file
+
+Run the magic command in a directory with a file called `test.py`:
+
+```sh
+  magic -f test.py python3
+```
+
+This command will run the file `test.py` with the interpreter `python3` and automatically try to fix it when it crashes or has a bug.
+
+### 2. Translate from Python to TypeScript
+
+Run the magic command in a directory with a file called `test.py`. We also need to specify a file that we want to write to `test.ts` in this case (If not the CLI will only log to the console):
+
+```sh
+  magic -l test.py TypeScript -o test.ts
+```
+
 ## Usage
 
 <img src="images/test.gif" alt="test">
@@ -104,12 +124,6 @@ If you'd just want to give something back, I've got a Buy Me A Coffee account:
 </a>
 
 Thanks and have an awesome day 👋
-
-<!-- Julian Schoen - [@julianschoen](https://twitter.com/julianschoen) - j.schoen@mail.com
-
-Feel free to say thanks: [Buy Me A Coffee](https://www.buymeacoffee.com/ntegrals) -->
-
-<!-- Disclaimer -->
 
 ## Disclaimer
 
