@@ -25,8 +25,8 @@
 
 ## Features
 
+    ✅ Self-Repairing Code              [Runs a script in any language and fixes it upon crash]
     ✅ Code Review                      [Reviews a code file]
-    ✅ Self Healing Code                [Runs a script in any language and fixes it upon a crash]
     ✅ Generate Unit Tests              [Generates unit tests for a code file]
     ✅ Convert Programming Language     [Converts a code file to another language]
     ✅ ELI5 Code                        [Generates an ELI5 explanation]
@@ -70,7 +70,7 @@ magic
 
 <!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources. -->
 
-Run `magic-cli -h` to see all available commands
+Run `magic -h` to see all available commands
 
     Options:
     -v, --version                             output the current version
@@ -86,6 +86,7 @@ Run `magic-cli -h` to see all available commands
     -z, --arbitrary <prompt>                  accepts any instruction
     -o, --output [filePath]                   the output file path
     -s, --silent                              prevents logging the stream to the console
+    -g, --gpt3                                Only uses GPT-3.5
     -ak, --addkey [apiKey]                    add your OpenAI API key to the the environment
     -dk, --deletekey                          delete your OpenAI API key from the environment
     -pk, --printkey                           print your OpenAI API key
