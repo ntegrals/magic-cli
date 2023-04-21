@@ -9,7 +9,7 @@
 <h3 align="center">Magic GPT</h3>
 
   <p align="center">
-    Self-repairing code for any language, programming language conversion, automatic unit tests, and much more
+    Self-repairing code for any language, programming language translation, automatic unit tests, and much more
     <br />
     <br />
     <a href="https://github.com/ntegrals/magicgpt">View Demo</a>
