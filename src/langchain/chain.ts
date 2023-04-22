@@ -12,7 +12,8 @@ export const runCompleteChain = async (
   filePath: string,
   instruction: string,
   loadingMessage: string,
-  silent: boolean = false
+  silent: boolean = false,
+  model: string
 ) => {
   let file;
   try {
@@ -25,7 +26,13 @@ export const runCompleteChain = async (
     }
     return;
   }
-  const output = await runChain(file, instruction, loadingMessage, silent);
+  const output = await runChain(
+    file,
+    instruction,
+    loadingMessage,
+    silent,
+    model
+  );
   // console.log(output.text);
   return output.text;
 };
@@ -37,15 +44,14 @@ export const runChain = async (
   instructTemplate: string,
   loadingMessage: string = "Thinking...",
   silent: boolean = false,
-  //   modelName: string = "gpt-4"
-  modelName: string = "gpt-3.5-turbo"
+  model: string
 ) => {
   const spinner = new Spinner(loadingMessage);
   let messages;
 
   const chat = new ChatOpenAI({
     temperature: 0.5,
-    modelName: modelName,
+    modelName: model,
     streaming: true,
     callbackManager: CallbackManager.fromHandlers({
       async handleLLMNewToken(token: string) {
@@ -68,54 +74,3 @@ export const runChain = async (
   if (silent) spinner.success("Done!");
   return response;
 };
-
-// export const runChainRecursive = async (
-//   instructTemplate: string,
-//   data: string,
-//   loadingMessage: string = "Thinking...",
-//   //   modelName: string = "gpt-4"
-//   modelName: string = "gpt-3.5-turbo",
-//   reflexionLimit: number = 3
-// ) => {
-//   const spinner = new Spinner(loadingMessage);
-
-//   // Run the chain in a loop
-
-//   let llmOutput = "";
-//   let response;
-//   for (let i = 0; i < reflexionLimit; i++) {
-//     let messages;
-
-//     const chat = new ChatOpenAI({
-//       temperature: 0,
-//       modelName: modelName,
-//       streaming: true,
-//       callbackManager: CallbackManager.fromHandlers({
-//         async handleLLMNewToken(token: string) {
-//           // console.log(token);
-//           // Write stream to file
-
-//           process.stdout.write(chalk.blue(token));
-//         },
-//       }),
-//     });
-
-//     if (llmOutput === "") {
-//       messages = [
-//         new SystemChatMessage(instructTemplate),
-//         new HumanChatMessage(data),
-//       ];
-//     } else {
-//       messages = [
-//         new SystemChatMessage(instructTemplate),
-//         new HumanChatMessage(llmOutput),
-//       ];
-//     }
-
-//     response = await chat.call(messages);
-//     llmOutput = response.text;
-//   }
-
-//   spinner.success("Done!");
-//   return response;
-// };

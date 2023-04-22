@@ -66,7 +66,7 @@ const main = async () => {
   // or you can specify a specifc output file
   let filePath = join(process.cwd(), "output.txt");
   let silent = false;
-  // let reflect = false;
+  let model = "gpt-4";
 
   if (options.output) {
     filePath = typeof options.output === "string" ? options.output : filePath;
@@ -75,6 +75,11 @@ const main = async () => {
   if (options.silent) {
     silent = true;
   }
+
+  if (options.gpt3) {
+    model = "gpt-3.5-turbo";
+  }
+
   // Options for API Key
   if (options.addkey) {
     const key = typeof options.addkey === "string" ? options.addkey : "";
@@ -97,11 +102,11 @@ const main = async () => {
       console.log(chalk.red("You have not added your API key"));
     }
   } else if (options.review) {
-    defaultOption(options, "review", prompts.codeReviewInstruction);
+    defaultOption(options, "review", prompts.codeReviewInstruction, model);
   } else if (options.improve) {
-    defaultOption(options, "improve", prompts.refactorInstruction);
+    defaultOption(options, "improve", prompts.refactorInstruction, model);
   } else if (options.best) {
-    defaultOption(options, "best", prompts.bestPracticesInstruction);
+    defaultOption(options, "best", prompts.bestPracticesInstruction, model);
   } else if (options.fix) {
     if (options.fix.length < 2) {
       console.log(
@@ -148,19 +153,29 @@ const main = async () => {
         prompts.fixInstruction.replace("{replace}", result.output), // add the error to the instruction
         "Running script in regenerative mode...",
         silent,
-        "gpt-4"
+        model
       );
 
       writeFile(filePath, llmOutput.text);
     }
   } else if (options.lang) {
-    await multiOption(options, "lang", prompts.convertLanguageInstruction);
+    await multiOption(
+      options,
+      "lang",
+      prompts.convertLanguageInstruction,
+      model
+    );
   } else if (options.eli5) {
-    await defaultOption(options, "eli5", prompts.eli5Instruction);
+    await defaultOption(options, "eli5", prompts.eli5Instruction, model);
   } else if (options.test) {
-    await multiOption(options, "test", prompts.testsInstruction);
+    await multiOption(options, "test", prompts.testsInstruction, model);
   } else if (options.document) {
-    await defaultOption(options, "document", prompts.documentationInstruction);
+    await defaultOption(
+      options,
+      "document",
+      prompts.documentationInstruction,
+      model
+    );
   } else if (options.arbitrary) {
     const prompt =
       typeof options.arbitrary === "string" ? options.arbitrary : "";
@@ -168,14 +183,15 @@ const main = async () => {
       prompt,
       prompts.arbitraryInstruction,
       "Running arbitrary instruction...",
-      silent
+      silent,
+      model
     );
 
     if (data && options.output) {
       writeFile(filePath, data.text);
     }
   } else if (options.arbitraryFile) {
-    multiOption(options, "arbitraryFile", prompts.arbitraryInstruction);
+    multiOption(options, "arbitraryFile", prompts.arbitraryInstruction, model);
   }
 };
 

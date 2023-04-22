@@ -21,7 +21,8 @@ export const writeFile = (filePath: string, data: string) => {
 export const defaultOption = async (
   options: any,
   commandName: string,
-  instruction: string
+  instruction: string,
+  model: string
 ) => {
   let silent;
   if (options.silent) {
@@ -38,7 +39,8 @@ export const defaultOption = async (
       inputFilePath,
       instruction,
       "Dreaming of electric sheep...",
-      silent
+      silent,
+      model
     );
     if (data && options.output) {
       const outputFilePath =
@@ -53,7 +55,8 @@ export const defaultOption = async (
 export const multiOption = async (
   options: any,
   commandName: string,
-  instruction: string
+  instruction: string,
+  model: string
 ) => {
   let silent;
   if (options.silent) {
@@ -83,7 +86,8 @@ export const multiOption = async (
       inputFilePath,
       instruction.replace("{replace}", replacement),
       "Dreaming of electric sheep...",
-      silent
+      silent,
+      model
     );
     // checks if the data is not null
     // writes to a file by default
