@@ -20,6 +20,8 @@
   </p>
 </div>
 
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
 ## Features
 
     ✅ Self-Repairing Code              [Runs a script in any language and fixes it upon crash]
