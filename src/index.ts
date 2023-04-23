@@ -85,7 +85,7 @@ const main = async () => {
     const key = typeof options.addkey === "string" ? options.addkey : "";
 
     if (key) {
-      fs.writeFileSync(join(__dirname, ".env"), `OPENAI_API_KEY=${key}`);
+      fs.writeFileSync(join(".env"), `OPENAI_API_KEY=${key}`);
       console.log(chalk.green("You have successfully added your API key"));
     } else {
       console.log(chalk.red("Please enter a valid API key"));
