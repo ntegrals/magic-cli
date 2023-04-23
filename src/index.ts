@@ -58,7 +58,7 @@ const main = async () => {
 
   // default, when no options are passed
   if (!process.argv.slice(2).length) {
-    console.log(figlet.textSync("Magic CLI"));
+    console.log(figlet.textSync("Magic GPT"));
     program.outputHelp();
   }
 

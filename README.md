@@ -20,7 +20,9 @@
   </p>
 </div>
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<a href="https://github.com/ntegrals/magicgpt">
+    <img src="images/demo.png" alt="Logo" width="80" height="80">
+  </a>
 
 ## Features
 
