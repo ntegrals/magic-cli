@@ -79,7 +79,6 @@ const main = async () => {
 
   if (envVars) {
     apiKey = envVars.split("=")[1];
-    console.log(apiKey);
   } else {
   }
 
