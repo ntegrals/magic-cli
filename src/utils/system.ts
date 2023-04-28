@@ -22,7 +22,8 @@ export const defaultOption = async (
   options: any,
   commandName: string,
   instruction: string,
-  model: string
+  model: string,
+  apiKey: string
 ) => {
   let silent;
   if (options.silent) {
@@ -40,7 +41,8 @@ export const defaultOption = async (
       instruction,
       "Dreaming of electric sheep...",
       silent,
-      model
+      model,
+      apiKey
     );
     if (data && options.output) {
       const outputFilePath =
@@ -56,7 +58,8 @@ export const multiOption = async (
   options: any,
   commandName: string,
   instruction: string,
-  model: string
+  model: string,
+  apiKey: string
 ) => {
   let silent;
   if (options.silent) {
@@ -87,7 +90,8 @@ export const multiOption = async (
       instruction.replace("{replace}", replacement),
       "Dreaming of electric sheep...",
       silent,
-      model
+      model,
+      apiKey
     );
     // checks if the data is not null
     // writes to a file by default

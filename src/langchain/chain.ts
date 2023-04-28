@@ -1,19 +1,17 @@
 import { ChatOpenAI } from "langchain/chat_models/openai";
-import dotenv from "dotenv";
 import { Spinner } from "../utils/spinner";
 import { readFile } from "../utils/system";
 import { HumanChatMessage, SystemChatMessage } from "langchain/schema";
 import chalk from "chalk";
 import { CallbackManager } from "langchain/callbacks";
 
-dotenv.config();
-
 export const runCompleteChain = async (
   filePath: string,
   instruction: string,
   loadingMessage: string,
   silent: boolean = false,
-  model: string
+  model: string,
+  apiKey: string
 ) => {
   let file;
   try {
@@ -31,7 +29,8 @@ export const runCompleteChain = async (
     instruction,
     loadingMessage,
     silent,
-    model
+    model,
+    apiKey
   );
   // console.log(output.text);
   return output.text;
@@ -44,12 +43,14 @@ export const runChain = async (
   instructTemplate: string,
   loadingMessage: string = "Thinking...",
   silent: boolean = false,
-  model: string
+  model: string,
+  apiKey: string
 ) => {
   const spinner = new Spinner(loadingMessage);
   let messages;
 
   const chat = new ChatOpenAI({
+    openAIApiKey: apiKey,
     temperature: 0.5,
     modelName: model,
     streaming: true,

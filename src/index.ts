@@ -11,9 +11,12 @@ import {
   readFile,
   writeFile,
 } from "./utils/system";
-import { join } from "path";
+import { join, resolve } from "path";
 import * as prompts from "./langchain/prompts";
 import { executeFile } from "./utils/code";
+// import dotenv from "dotenv";
+
+// dotenv.config();
 
 const main = async () => {
   const program = new Command();
@@ -67,6 +70,18 @@ const main = async () => {
   let filePath = join(process.cwd(), "output.txt");
   let silent = false;
   let model = "gpt-4";
+  let apiKey = "";
+
+  let envVars;
+  try {
+    envVars = fs.readFileSync(join(__dirname, ".env"), { encoding: "utf8" });
+  } catch (error) {}
+
+  if (envVars) {
+    apiKey = envVars.split("=")[1];
+    console.log(apiKey);
+  } else {
+  }
 
   if (options.output) {
     filePath = typeof options.output === "string" ? options.output : filePath;
@@ -85,7 +100,7 @@ const main = async () => {
     const key = typeof options.addkey === "string" ? options.addkey : "";
 
     if (key) {
-      fs.writeFileSync(join(".env"), `OPENAI_API_KEY=${key}`);
+      fs.writeFileSync(join(__dirname, ".env"), `OPENAI_API_KEY=${key}`);
       console.log(chalk.green("You have successfully added your API key"));
     } else {
       console.log(chalk.red("Please enter a valid API key"));
@@ -94,7 +109,12 @@ const main = async () => {
     fs.writeFileSync(join(__dirname, ".env"), "");
     console.log(chalk.green("You have successfully deleted your API key"));
   } else if (options.printkey) {
-    const data = fs.readFileSync(join(__dirname, ".env"), { encoding: "utf8" });
+    let data;
+    try {
+      data = fs.readFileSync(join(__dirname, ".env"), { encoding: "utf8" });
+    } catch (error) {
+      console.log(chalk.red("You have not added your API key"));
+    }
 
     if (data) {
       console.log(chalk.blue(data));
@@ -102,11 +122,29 @@ const main = async () => {
       console.log(chalk.red("You have not added your API key"));
     }
   } else if (options.review) {
-    defaultOption(options, "review", prompts.codeReviewInstruction, model);
+    defaultOption(
+      options,
+      "review",
+      prompts.codeReviewInstruction,
+      model,
+      apiKey
+    );
   } else if (options.improve) {
-    defaultOption(options, "improve", prompts.refactorInstruction, model);
+    defaultOption(
+      options,
+      "improve",
+      prompts.refactorInstruction,
+      model,
+      apiKey
+    );
   } else if (options.best) {
-    defaultOption(options, "best", prompts.bestPracticesInstruction, model);
+    defaultOption(
+      options,
+      "best",
+      prompts.bestPracticesInstruction,
+      model,
+      apiKey
+    );
   } else if (options.fix) {
     if (options.fix.length < 2) {
       console.log(
@@ -153,7 +191,8 @@ const main = async () => {
         prompts.fixInstruction.replace("{replace}", result.output), // add the error to the instruction
         "Running script in regenerative mode...",
         silent,
-        model
+        model,
+        apiKey
       );
 
       writeFile(filePath, llmOutput.text);
@@ -163,18 +202,26 @@ const main = async () => {
       options,
       "lang",
       prompts.convertLanguageInstruction,
-      model
+      model,
+      apiKey
     );
   } else if (options.eli5) {
-    await defaultOption(options, "eli5", prompts.eli5Instruction, model);
+    await defaultOption(
+      options,
+      "eli5",
+      prompts.eli5Instruction,
+      model,
+      apiKey
+    );
   } else if (options.test) {
-    await multiOption(options, "test", prompts.testsInstruction, model);
+    await multiOption(options, "test", prompts.testsInstruction, model, apiKey);
   } else if (options.document) {
     await defaultOption(
       options,
       "document",
       prompts.documentationInstruction,
-      model
+      model,
+      apiKey
     );
   } else if (options.arbitrary) {
     const prompt =
@@ -184,14 +231,21 @@ const main = async () => {
       prompts.arbitraryInstruction,
       "Running arbitrary instruction...",
       silent,
-      model
+      model,
+      apiKey
     );
 
     if (data && options.output) {
       writeFile(filePath, data.text);
     }
   } else if (options.arbitraryFile) {
-    multiOption(options, "arbitraryFile", prompts.arbitraryInstruction, model);
+    multiOption(
+      options,
+      "arbitraryFile",
+      prompts.arbitraryInstruction,
+      model,
+      apiKey
+    );
   }
 };
 
