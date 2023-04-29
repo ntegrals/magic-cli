@@ -20,8 +20,8 @@
   </p>
 </div>
 
-<a href="https://github.com/ntegrals/magicgpt">
-    <img src="images/demo.png" alt="Logo" width="80" height="80">
+<a href="https://www.loom.com/share/9b390a7a4bd24f399637a68036f22648">
+    <img src="images/demo.png" alt="Logo">
   </a>
 
 ## Features
