@@ -54,8 +54,13 @@ You need to have [Node.js](https://nodejs.org/en) installed.
    ```
 3. The CLI can then simply be called by running:
    ```
+   thanksgpt
+   ```
+   or
+   ```
    thanks
    ```
+   I'm going to use the latter in the following examples for the sake of brevity.
 4. Add your OpenAI API key (It's only stored on your device)
    ```sh
    thanks -ak "sk-9jfoa..."
