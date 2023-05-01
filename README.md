@@ -27,18 +27,18 @@
 ## Features
 
     ✅ Self-Repairing Code              [Runs a script in any language and fixes it upon crash]
-    ✅ Conduct Code Reviews             [Reviews a code file]
     ✅ Generate Unit Tests              [Generates unit tests for a code file]
+    ✅ Conduct Code Reviews             [Reviews a code file]
     ✅ Translate Programming Languages  [Converts a code file to another language]
     ✅ ELI5 Code                        [Generates an ELI5 explanation]
     ✅ Refactor Code                    [Refactors the code]
     ✅ Document Code                    [Adds documentation to the code]
     ✅ Best Practices                   [Converts the code to use the best practices]
+    ✅ Arbitrary Input                  [Prompt GPT-4 anything]
     🟨 Reflexion                        [GPT reflects on it's answers to improve the output quality]
     🟨 Add new feature                  [Adds a new feature based on an input file]
     🟨 Increase context window          [Increase context window with vector embeddings]
     🟨 Process directories              [CLI can process directories and not only files]
-    🟨 Provide examples                 [User can provide examples to better guide GPT-4]
 
 ## Installation
 
@@ -46,13 +46,13 @@ You need to have [Node.js](https://nodejs.org/en) installed.
 
 1. Get an OpenAI API Key at [https://openai.com/](https://openai.com/)
 
-   By default the model uses GPT-4. If you don't have access to GPT-4 yet, you have to use the --gpt3 flag. Thanks GPT is much more powerful with GPT-4.
+   ❗️ By default the model uses GPT-4. If you don't have access to GPT-4 yet, you have to use the --gpt3 flag. (It will then use the GPT-3.5 Turbo model)
 
 2. Install the CLI via npm
    ```sh
    npm install -g thanksgpt
    ```
-3. To verify that the installation worked, run:
+3. The CLI can then simply be called by running:
    ```
    thanks
    ```
