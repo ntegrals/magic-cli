@@ -70,7 +70,11 @@ You need to have [Node.js](https://nodejs.org/en) installed.
 
 ## Examples
 
-### 1. Self-Repair a Python file
+### 1. Self-Repair
+
+This command will run a code file in any language and automatically try to fix it when it crashes or has a bug.
+
+#### 1.1 Self-Repair a Python file
 
 Run the thanks command in a directory with a file called `test.py`:
 
@@ -78,7 +82,17 @@ Run the thanks command in a directory with a file called `test.py`:
   thanks -f test.py python3
 ```
 
-This command will run the file `test.py` with the interpreter `python3` and automatically try to fix it when it crashes or has a bug.
+This command will run the file `test.py` with the interpreter `python3`.
+
+#### 1.2 Self-Repair a TypeScript file
+
+Run the thanks command in a directory with a file called `test.ts`:
+
+```sh
+  thanks -f test.py ts-node
+```
+
+This command will run the file `test.ts` with the interpreter `ts-node`.
 
 ### 2. Translate from Python to TypeScript
 
@@ -99,6 +113,14 @@ Run the thanks command in a directory with a file called `test.py`. In this case
 ### 4. Generate unit tests
 
 Run the thanks command in a directory with a file called `hello.ts` with the testing framework that we want to use (Jest in this case). We also need to specify the file that we want to write to `hello.test.ts`. Now Thanks GPT will automatically generate unit tests for the code.
+
+```sh
+  thanks -t hello.ts Jest -o hello.test.ts
+```
+
+### 4. Use arbitrary prompt
+
+You can also
 
 ```sh
   thanks -t hello.ts Jest -o hello.test.ts
