@@ -46,7 +46,7 @@ You need to have [Node.js](https://nodejs.org/en) installed.
 
 1. Get an OpenAI API Key at [https://openai.com/](https://openai.com/)
 
-   ❗️ By default the model uses GPT-4. If you don't have access to GPT-4 yet, you have to use the --gpt3 flag. (It will then use the GPT-3.5 Turbo model)
+   ❗️ By default the model uses GPT-4. If you don't have access to GPT-4 yet, you have to use the -g3 flag. (It will then use the GPT-3.5 Turbo model)
 
 2. Install the CLI via npm
    ```sh
@@ -118,19 +118,33 @@ Run the thanks command in a directory with a file called `hello.ts` with the tes
   thanks -t hello.ts Jest -o hello.test.ts
 ```
 
-### 4. Use arbitrary prompt
+### 4. Use custom prompt
 
-You can also
+Using a custom prompt is also really convenient, as it allows for a super convenient way to use GPT-4 on the command line.
+
+You have two options:
+
+1. Use the -x flag. This flag accepts a file input and a custom prompt.
 
 ```sh
-  thanks -t hello.ts Jest -o hello.test.ts
+  thanks -x hello.ts "Check this code for security vulnerabilities"
 ```
 
+2. Use the -z flag. This flag only accepts a custom prompt. (Without a file input)
+
+```sh
+  thanks -z "Why is the answer to everything 42?"
+```
+
+These methods can also be used to generate entirely new features.
+
+```sh
+  thanks -x hello.ts "Given the provided code, create new a functional React component, that implements a loading spinner. Only return the code." -o spinner.ts
+```
+
+The command above reads the "hello.ts" file, sends the code with your prompt to GPT-4 and writes the result to "spinner.ts".
+
 ## Usage
-
-<!-- <img src="images/test.gif" alt="test"> -->
-
-<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources. -->
 
 Run `thanks -h` to see all available commands
 
