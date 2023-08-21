@@ -120,7 +120,7 @@ Run the thanks command in a directory with a file called `hello.ts` with the tes
 
 ### 4. Use custom prompt
 
-Using a custom prompt is also really convenient, as it allows for a super convenient way to use GPT-4 on the command line.
+Using a custom prompt is also really convenient.
 
 You have two options:
 
