@@ -6,7 +6,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Thanks GPT</h3>
+<h3 align="center">ThanksGPT</h3>
 
   <p align="center">
     Self-repairing code for any language, programming language translation, automatic unit tests, and much more
@@ -20,7 +20,7 @@
   </p>
 </div>
 
-<a href="https://www.loom.com/share/9b390a7a4bd24f399637a68036f22648">
+<a href="https://youtu.be/GyRd0qW0mYo">
     <img src="images/demo.png" alt="Logo">
   </a>
 
