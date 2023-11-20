@@ -50,7 +50,7 @@ You need to have [Node.js](https://nodejs.org/en) installed.
 
 2. Install the CLI via npm
    ```sh
-   npm install -g magiccli
+   npm install -g the-magic-cli
    ```
 3. The CLI can then simply be called by running:
    ```
