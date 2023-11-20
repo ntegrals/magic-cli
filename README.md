@@ -2,27 +2,27 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/ntegrals/thanksgpt">
+  <a href="https://github.com/ntegrals/magic-cli">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">ThanksGPT</h3>
+<h3 align="center">Magic CLI</h3>
 
   <p align="center">
     Self-repairing code for any language, programming language translation, automatic unit tests, and much more
     <br />
     <br />
-    <a href="https://github.com/ntegrals/thanksgpt">View Demo</a>
+    <a href="https://github.com/ntegrals/magic-cli">View Demo</a>
     ·
-    <a href="https://github.com/ntegrals/thanksgpt/issues">Report Bug</a>
+    <a href="https://github.com/ntegrals/magic-cli/issues">Report Bug</a>
     ·
-    <a href="https://github.com/ntegrals/thanksgpt/issues">Request Feature</a>
+    <a href="https://github.com/ntegrals/magic-cli/issues">Request Feature</a>
   </p>
 </div>
 
-<a href="https://youtu.be/GyRd0qW0mYo">
+<!-- <a href="https://youtu.be/GyRd0qW0mYo">
     <img src="images/demo.png" alt="Logo">
-  </a>
+  </a> -->
 
 ## Features
 
@@ -50,20 +50,20 @@ You need to have [Node.js](https://nodejs.org/en) installed.
 
 2. Install the CLI via npm
    ```sh
-   npm install -g thanksgpt
+   npm install -g magiccli
    ```
 3. The CLI can then simply be called by running:
    ```
-   thanksgpt
+   magic
    ```
    or
    ```
-   thanks
+   magic-cli
    ```
    I'm going to use the latter in the following examples for the sake of brevity.
 4. Add your OpenAI API key (It's only stored on your device)
    ```sh
-   thanks -ak "sk-9jfoa..."
+   magic -ak "sk-9jfoa..."
    ```
 
 <!-- USAGE EXAMPLES -->
@@ -76,46 +76,46 @@ This command will run a code file in any language and automatically try to fix i
 
 #### 1.1 Self-Repair a Python file
 
-Run the thanks command in a directory with a file called `test.py`:
+Run the magic command in a directory with a file called `test.py`:
 
 ```sh
-  thanks -f test.py python3
+  magic -f test.py python3
 ```
 
 This command will run the file `test.py` with the interpreter `python3`.
 
 #### 1.2 Self-Repair a TypeScript file
 
-Run the thanks command in a directory with a file called `test.ts`:
+Run the magic command in a directory with a file called `test.ts`:
 
 ```sh
-  thanks -f test.py ts-node
+  magic -f test.py ts-node
 ```
 
 This command will run the file `test.ts` with the interpreter `ts-node`.
 
 ### 2. Translate from Python to TypeScript
 
-Run the thanks command in a directory with a file called `test.py`. We also need to specify a file that we want to write to `test.ts` in this case (If not the CLI will only log to the console). Now Thanks GPT will automatically translate the code to TypeScript.
+Run the magic command in a directory with a file called `test.py`. We also need to specify a file that we want to write to `test.ts` in this case (If not the CLI will only log to the console). Now Magic CLI will automatically translate the code to TypeScript.
 
 ```sh
-  thanks -l test.py TypeScript -o test.ts
+  magic -l test.py TypeScript -o test.ts
 ```
 
 ### 3. Conduct a code review
 
-Run the thanks command in a directory with a file called `test.py`. In this case we might only want to view the output in the terminal, so we don't need to specify an output file. This command will review the code and give you feedback on how to improve it.
+Run the magic command in a directory with a file called `test.py`. In this case we might only want to view the output in the terminal, so we don't need to specify an output file. This command will review the code and give you feedback on how to improve it.
 
 ```sh
-  thanks -r test.py
+  magic -r test.py
 ```
 
 ### 4. Generate unit tests
 
-Run the thanks command in a directory with a file called `hello.ts` with the testing framework that we want to use (Jest in this case). We also need to specify the file that we want to write to `hello.test.ts`. Now Thanks GPT will automatically generate unit tests for the code.
+Run the magic command in a directory with a file called `hello.ts` with the testing framework that we want to use (Jest in this case). We also need to specify the file that we want to write to `hello.test.ts`. Now Magic CLI will automatically generate unit tests for the code.
 
 ```sh
-  thanks -t hello.ts Jest -o hello.test.ts
+  magic -t hello.ts Jest -o hello.test.ts
 ```
 
 ### 4. Use custom prompt
@@ -127,26 +127,26 @@ You have two options:
 1. Use the -x flag. This flag accepts a file input and a custom prompt.
 
 ```sh
-  thanks -x hello.ts "Check this code for security vulnerabilities"
+  magic -x hello.ts "Check this code for security vulnerabilities"
 ```
 
 2. Use the -z flag. This flag only accepts a custom prompt. (Without a file input)
 
 ```sh
-  thanks -z "Why is the answer to everything 42?"
+  magic -z "Why is the answer to everything 42?"
 ```
 
 These methods can also be used to generate entirely new features.
 
 ```sh
-  thanks -x hello.ts "Given the provided code, create new a functional React component, that implements a loading spinner. Only return the code." -o spinner.ts
+  magic -x hello.ts "Given the provided code, create new a functional React component, that implements a loading spinner. Only return the code." -o spinner.ts
 ```
 
 The command above reads the "hello.ts" file, sends the code with your prompt to GPT-4 and writes the result to "spinner.ts".
 
 ## Usage
 
-Run `thanks -h` to see all available commands
+Run `magic -h` to see all available commands
 
     Options:
     -v, --version                             output the current version
@@ -184,13 +184,13 @@ Thanks and have an awesome day 👋
 
 ## Disclaimer
 
-Thanks GPT, is an experimental application and is provided "as-is" without any warranty, express or implied. By using this software, you agree to assume all risks associated with its use, including but not limited to data loss, system failure, or any other issues that may arise.
+Magic CLI, is an experimental application and is provided "as-is" without any warranty, express or implied. By using this software, you agree to assume all risks associated with its use, including but not limited to data loss, system failure, or any other issues that may arise.
 
-The developers and contributors of this project do not accept any responsibility or liability for any losses, damages, or other consequences that may occur as a result of using this software. You are solely responsible for any decisions and actions taken based on the information provided by Thanks GPT.
+The developers and contributors of this project do not accept any responsibility or liability for any losses, damages, or other consequences that may occur as a result of using this software. You are solely responsible for any decisions and actions taken based on the information provided by Magic CLI.
 
 Please note that the use of the GPT-4 language model can be expensive due to its token usage. By utilizing this project, you acknowledge that you are responsible for monitoring and managing your own token usage and the associated costs. It is highly recommended to check your OpenAI API usage regularly and set up any necessary limits or alerts to prevent unexpected charges.
 
-By using Thanks GPT, you agree to indemnify, defend, and hold harmless the developers, contributors, and any affiliated parties from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from your use of this software or your violation of these terms.
+By using Magic CLI, you agree to indemnify, defend, and hold harmless the developers, contributors, and any affiliated parties from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from your use of this software or your violation of these terms.
 
 <!-- LICENSE -->
 

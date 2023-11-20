@@ -1,11 +1,11 @@
 {
-  "name": "thanksgpt",
+  "name": "magiccli",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "bin": {
-    "thanks": "dist/index.js",
-    "thanksgpt": "dist/index.js"
+    "magic": "dist/index.js",
+    "magic-cli": "dist/index.js"
   },
   "scripts": {
     "build": "npx tsc",
